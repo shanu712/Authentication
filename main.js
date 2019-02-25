@@ -23,3 +23,27 @@
      modal.style.display = "none";
    }
  }
+ 
+
+function Login(){
+        $.ajax({
+            
+            url: 'http://localhost:61666/api/Logins/'+$('#uid').val(),
+            type: 'GET',
+            dataType: 'json',
+            success: function(res){
+                if(res.Password==$('#pass').val()) {
+                    // if user loggedin then redirect to home page.
+                   window.location = "dashboard.html";
+                }
+                else{
+                    alert("Incorrect User-ID or password!!!");
+                }
+            }
+        });   
+    }
+
+
+
+
+           

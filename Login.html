@@ -4,6 +4,9 @@
 <head>
   <title>LOGIN PAGE</title>
   <link rel="stylesheet" href="log.css">
+     <script  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script> 
 </head>
 
 <body>
@@ -27,9 +30,10 @@
           <h1>Login to your Account.</h1>
 
         <form class="login-form">
-          <input type="text" placeholder="Email" />
-          <input type="password" placeholder="password" />
-          <button><a class='continue' href='#'>Login</a></button>
+          <input type="email" placeholder="Email" id="email" required/>
+          <input type="password" placeholder="password" id ="password" required/>
+<!--          <input style="background-color:green;" type="submit" value="Login">-->
+            <button type="submit" onclick="Login()">Login</button>
           <span>Forgot Password:</span>
           <a id="myBtn" class="continue" href="#">Click To Reset.</a>
         </form>
